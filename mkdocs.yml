@@ -1,0 +1,10 @@
+site_name: 'Bushidō'
+site_description: 'Bushidō 武士道 : "the way of the warrior"'
+site_author: 'debuggerboy'
+theme:
+  name: material
+copyright: |
+  &copy; Author
+docs_dir: 'docs/'
+repo_name: 'pulsiot/bushi.do.pulsiot.com'
+repo_url: 'https://github.com/pulsiot/bushi.do.pulsiot.com'
