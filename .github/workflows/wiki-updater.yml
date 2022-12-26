@@ -29,6 +29,9 @@ jobs:
           WIKI_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
         run: echo ${WIKI_DOMAIN} > CNAME
 
+      - name: Test the file 1st time
+        run: ls -la CNAME && md5sum CNAME
+
       - name: Generate Documentation
         run: mkdocs build
 
@@ -38,6 +41,9 @@ jobs:
         with:
           name: site
           path: ./site
+
+      - name: Test the file 2nd time
+        run: ls -la CNAME && md5sum CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
