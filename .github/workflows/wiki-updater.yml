@@ -35,9 +35,16 @@ jobs:
       - name: Generate Documentation
         run: mkdocs build
 
-      - name: Upload Artifacts
+      - name: Upload Artifacts when pushed to branch
         uses: actions/upload-artifact@v3
         if: ${{ github.event_name == 'push'}} 
+        with:
+          name: site
+          path: ./site
+
+      - name: Upload Artifacts when ran manually
+        uses: actions/upload-artifact@v3
+        if: ${{ github.event_name == 'schedule'}} 
         with:
           name: site
           path: ./site
