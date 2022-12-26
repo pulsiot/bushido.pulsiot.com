@@ -12,21 +12,21 @@
         <meta name="author" content="debuggerboy">
       
       
-        <link rel="canonical" href="https://bushido.pulsiot.com/">
+        <link rel="canonical" href="https://bushido.pulsiot.com/devops/aws/iam/roles/">
       
-      <link rel="icon" href="images/favicon.png">
+      <link rel="icon" href="../../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Bushidō</title>
+        <title>AWS IAM Roles - Bushidō</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
         
       
       
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bushido" class="md-skip">
+        <a href="#aws-iam-roles" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Bushidō" class="md-header__button md-logo" aria-label="Bushidō" data-md-component="logo">
+    <a href="../../../.." title="Bushidō" class="md-header__button md-logo" aria-label="Bushidō" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h128c35.3 0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H160c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h128V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256c0-22.1-17.9-40-40-40s-40 17.9-40 40 17.9 40 40 40 40-17.9 40-40zm152 40c22.1 0 40-17.9 40-40s-17.9-40-40-40-40 17.9-40 40 17.9 40 40 40zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bushidō (武士道)
+              AWS IAM Roles
             
           </span>
         </div>
@@ -173,12 +173,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../../.." class="md-tabs__link">
       Bushidō (武士道)
     </a>
   </li>
@@ -187,13 +185,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="devops/" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Devops
       </a>
     </li>
@@ -223,7 +223,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Bushidō" class="md-nav__button md-logo" aria-label="Bushidō" data-md-component="logo">
+    <a href="../../../.." title="Bushidō" class="md-nav__button md-logo" aria-label="Bushidō" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h128c35.3 0 64 28.7 64 64v288c0 35.3-28.7 64-64 64H160c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h128V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256c0-22.1-17.9-40-40-40s-40 17.9-40 40 17.9 40 40 40 40-17.9 40-40zm152 40c22.1 0 40-17.9 40-40s-17.9-40-40-40-40 17.9-40 40 17.9 40 40 40zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>
@@ -252,59 +252,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Bushidō (武士道)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         Bushidō (武士道)
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-samurai-warrior-code" class="md-nav__link">
-    The Samurai Warrior Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-seven-virtues" class="md-nav__link">
-    The Seven Virtues
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -315,12 +267,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -343,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="devops/" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         DevOps
       </a>
     </li>
@@ -355,12 +309,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -383,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="devops/aws/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         AWS
       </a>
     </li>
@@ -395,12 +351,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" checked>
       
       
       
@@ -421,12 +379,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2_2_1" type="checkbox" id="__nav_2_2_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2_1" type="checkbox" id="__nav_2_2_2_1" checked>
       
       
       
@@ -447,11 +407,94 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="devops/aws/iam/roles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AWS IAM Roles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         AWS IAM Roles
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-user" class="md-nav__link">
+    Create IAM user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-policy" class="md-nav__link">
+    Create IAM policy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attach-iam-policy-to-a-iam-user" class="md-nav__link">
+    Attach IAM policy to a IAM User.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-credentials" class="md-nav__link">
+    Create AWS credentials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-role" class="md-nav__link">
+    Create IAM role
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-iam-user-and-iam-role" class="md-nav__link">
+    Test IAM user and IAM role
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -498,46 +541,128 @@
                 
                   
 
-  <a href="https://github.com/pulsiot/bushido.pulsiot.com/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/pulsiot/bushido.pulsiot.com/edit/master/docs/devops/aws/iam/roles/index.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="bushido">Bushidō (武士道)<a class="headerlink" href="#bushido" title="Permanent link">⚓︎</a></h1>
-<p><img alt="Alt text" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bushido.jpg/120px-Bushido.jpg" title="武士道" />
-"the way of the warrior"</p>
-<h2 id="the-samurai-warrior-code">The Samurai Warrior Code<a class="headerlink" href="#the-samurai-warrior-code" title="Permanent link">⚓︎</a></h2>
-<p>The samurai of ancient Japan followed a sequence of rules called the Bushido or “The Way of the Warrior”. These philosophical codes and guiding principles were specifically for the samurai warriors.</p>
-<p>During the medieval period in Japan, the samurai were present to serve their lord and protect the land. Though the warriors are no longer in service, their influence is still evident since some Japanese still refer to the Bushido in this day and age.</p>
-<h2 id="the-seven-virtues">The Seven Virtues<a class="headerlink" href="#the-seven-virtues" title="Permanent link">⚓︎</a></h2>
-<p>The Seven Virtues of Bushido are:</p>
+<h1 id="aws-iam-roles">AWS IAM Roles<a class="headerlink" href="#aws-iam-roles" title="Permanent link">⚓︎</a></h1>
+<h2 id="create-iam-user">Create IAM user<a class="headerlink" href="#create-iam-user" title="Permanent link">⚓︎</a></h2>
+<p>Lets create a new IAM user and a new IAM Role in AWS Account using AWS CLI. We will require AWS Admin user who have the permission to IAM users, IAM roles and IAM Policies.</p>
+<p>Lets create a AWS IAM user for "maurice moss".</p>
+<div class="codehilite"><pre><span></span><code>aws iam create-user --user-name maurice-moss
+</code></pre></div>
+
+<p>This should give us an output which will contain the ARN of the new IAM user, something like <code>arn:aws:iam::123456789012:user/maurice-moss</code> (Replace 123456789012 with your own account.)</p>
+<h2 id="create-iam-policy">Create IAM policy<a class="headerlink" href="#create-iam-policy" title="Permanent link">⚓︎</a></h2>
+<p>Now, lets create IAM Policy</p>
+<p>Create a file named "example-policy.json"</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;ec2:Describe*&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;iam:ListRoles&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>create "user-define" policy from the above "example-policy.json" file:</p>
+<div class="codehilite"><pre><span></span><code>aws iam create-policy --policy-name example-policy --policy-document file://example-policy.json
+</code></pre></div>
+
+<p>This should give us an output which will contain the ARN of the new policy, something like <code>arn:aws:iam::123456789012:policy/example-policy</code> (Replace 123456789012 with your own account.)</p>
+<p>Now, lets attach the "user-define" policy named "example-policy" to the user which we created earlier named "maurice moss"</p>
+<h2 id="attach-iam-policy-to-a-iam-user">Attach IAM policy to a IAM User.<a class="headerlink" href="#attach-iam-policy-to-a-iam-user" title="Permanent link">⚓︎</a></h2>
+<div class="codehilite"><pre><span></span><code>aws iam attach-user-policy --user-name maurice-moss --policy-arn &quot;arn:aws:iam::123456789012:policy/example-policy&quot;
+</code></pre></div>
+
+<p>Also, check to make sure that the attachment is in place using list-attached-user-policies:</p>
+<div class="codehilite"><pre><span></span><code>aws iam list-attached-user-policies --user-name maurice-moss
+</code></pre></div>
+
+<h2 id="create-aws-credentials">Create AWS credentials<a class="headerlink" href="#create-aws-credentials" title="Permanent link">⚓︎</a></h2>
+<p>Now lets create a "access_key_id" and "secret_access_key" for the IAM user "maurice-moss".</p>
+<div class="codehilite"><pre><span></span><code>aws iam create-access-key --user-name maurice-moss
+</code></pre></div>
+
+<p>Please keep note of these credentials later.</p>
+<h2 id="create-iam-role">Create IAM role<a class="headerlink" href="#create-iam-role" title="Permanent link">⚓︎</a></h2>
+<p>Now we will create a IAM role which could be assumed by the user "maurice-moss". Which have read-only access to RDS.</p>
+<p>So, lets create a trust relationship policy of the IAM role.</p>
+<p>Lets name this file : <code>example-role-trust-policy.json</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;AWS&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn.aws:iam::123456789012:root&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>Lets create a IAM Role with this trust relationship policy.</p>
+<div class="codehilite"><pre><span></span><code>aws iam create-role --role-name example-role --assume-role-policy-document file://example-role-trust-policy.json
+</code></pre></div>
+
+<p>Now lets attach an "AWS Managed" policy named "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess" to this role.</p>
+<div class="codehilite"><pre><span></span><code>aws iam attach-role-policy --role-name example-role --policy-arn &quot;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&quot;
+</code></pre></div>
+
+<p>We can verify the managed policies attached to a role using <code>list-attached-role-policies</code> :</p>
+<div class="codehilite"><pre><span></span><code>aws iam list-attached-role-policies --role-name example-role
+</code></pre></div>
+
+<h2 id="test-iam-user-and-iam-role">Test IAM user and IAM role<a class="headerlink" href="#test-iam-user-and-iam-role" title="Permanent link">⚓︎</a></h2>
+<p>Now we have the IAM user and the IAM role ready, lets confgure AWS CLI for the IAM user "maurice-moss" and verify its permissions.</p>
+<p>Lets use <code>aws configure</code> or <code>aws configure --profile=named-profile</code> command to configure the same. When asked for the Access Key and Secret Key provide the same we collected earlier.</p>
+<p>Lets run the below command: to verify the identity of the IAM user.</p>
+<div class="codehilite"><pre><span></span><code>aws sts get-caller-identity
+</code></pre></div>
+
+<p>You will see the IAM user as <code>arn:aws:iam::123456789012:user/maurice-moss</code></p>
+<p>Now try to access the EC2 and RDS instances:</p>
+<p>Lets try EC2 as 1st step:</p>
+<div class="codehilite"><pre><span></span><code>aws ec2 describe-instances --query &quot;Reservations[*].Instances[*].[VpcId, InstanceId, ImageId, InstanceType]&quot;
+</code></pre></div>
+
+<p>This should work flawlessly,</p>
+<p>Now, lets try to access RDS as 2nd step:</p>
+<div class="codehilite"><pre><span></span><code>aws rds describe-db-instances --query &quot;DBInstances[*].[DBInstanceIdentifier, DBName, DBInstanceStatus, AvailabilityZone, DBInstanceClass]&quot;
+</code></pre></div>
+
+<p>This command will generate an access denied error message because IAM user "maurice-moss" doesn't have access to Amazon RDS.</p>
+<p>In order for IAM user "maurice-moss" to access RDS instance, he should assume the IAM role named "example-role" as below:</p>
+<p>As a 1st step we need to identify the ARN of the IAM role named "example-role"</p>
+<div class="codehilite"><pre><span></span><code>aws iam list-roles --query &quot;Roles[?RoleName == &#39;example-role&#39;].[RoleName, Arn]&quot;
+</code></pre></div>
+
+<p>Lets keep not of the ARN from the above command, as we will have to use it with below Assume IAM role command:</p>
+<div class="codehilite"><pre><span></span><code>aws sts assume-role --role-arn &quot;arn:aws:iam::123456789012:role/example-role&quot; --role-session-name AWSCLI-Session
+</code></pre></div>
+
+<p>Now lets create three environment variables to assume the IAM role.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="n">RoleAccessKeyID</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="n">RoleSecretKey</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="n">AWS_SESSION_TOKEN</span><span class="o">=</span><span class="n">RoleSessionToken</span><span class="w"></span>
+</code></pre></div>
+
+<p>Now, lets re-try to access RDS using then IAM role:</p>
+<div class="codehilite"><pre><span></span><code>aws rds describe-db-instances --query &quot;DBInstances[*].[DBInstanceIdentifier, DBName, DBInstanceStatus, AvailabilityZone, DBInstanceClass]&quot;
+</code></pre></div>
+
+<h2 id="references">References:<a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li>Gi – (Justice or Integrity)</li>
-<li>Yu (Courage)</li>
-<li>Jin – (Mercy or Benevolence)</li>
-<li>Rei – (Respect)</li>
-<li>Makoto – (Honesty)</li>
-<li>Meiyo – (Honor)</li>
-<li>Chugi – (Loyalty)</li>
+<li>https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/</li>
+<li>https://www.youtube.com/watch?v=-uogKFE1r60</li>
 </ul>
-<p>Gi – Justice or Integrity
-This is ensuring that the individual has the right way and mindset when making decisions – that they have the power to decide swiftly. It is to guarantee that the person avoids indecisiveness and that decisions are based on the proper reasons.</p>
-<p>Yu – Courage
-Yu is focused on ensuring that an individual does and has the courage to do the right thing, not what others expect them to do. If a person is raised particularly, they have their own beliefs that they follow and have the courage to do.</p>
-<p>Jin – Mercy or Benevolence
-As great warriors, samurai have the right power to kill; yet due to the Bushido, Jin is to ensure that their mind and thinking is balanced – having mercy and sympathy at the proper situation.</p>
-<p>Jin and the Samurai
-This is to ensure that the warrior fought for the right reason and belief; it is also to guarantee that if there was no need to kill, the samurai would have mercy.</p>
-<p>Rei – Respect
-Based on the belief of a samurai, it is important that they respect and be polite towards everything. Their way of life meant they should be respectful of elders, respect life, and respect the belief of others.</p>
-<p>Makoto – Honesty
-Honesty was always vital since the warriors believe that honesty in everything they do will acquire respect. It would also mean that they are trustworthy.</p>
-<p>Meiyo – Honor
-Living and dying with great honor was vital to every samurai warrior. Everything they did was with great honor; meaning, everything that they did based on their belief was with honor.</p>
-<p>Chugi – Loyalty
-Another vital aspect of the Bushido was loyalty. The samurai treated each other just like family and would safeguard and help their fellow warriors.</p>
-<p>This was important because it meant they could trust each other, knowing that they would be loyal despite the circumstances.</p>
 
 
 
@@ -562,21 +687,21 @@ Another vital aspect of the Bushido was loyalty. The samurai treated each other 
     
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
-      
         
-        <a href="devops/" class="md-footer__link md-footer__link--next" aria-label="Next: DevOps" rel="next">
+        <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
-              DevOps
+              AWS
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
@@ -605,10 +730,10 @@ Another vital aspect of the Bushido was loyalty. The samurai treated each other 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
     
     
