@@ -25,12 +25,12 @@ jobs:
         run: pip install install mkdocs mkdocs-material fontawesome_markdown mdx_unimoji mkdocs-mermaid2-plugin pymdown-extensions plantuml-markdown python-markdown-math
 
       - name: Inject the custom domain
+        # Refer
+        # - https://github.com/tschaub/gh-pages/issues/213
+        # - https://github.com/mkdocs/mkdocs/issues/1377
         env:
           WIKI_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
         run: echo ${WIKI_DOMAIN} > docs/CNAME
-
-      - name: Test the file 1st time
-        run: ls -la docs/CNAME && md5sum docs/CNAME
 
       - name: Generate Documentation
         run: mkdocs build
@@ -41,9 +41,6 @@ jobs:
         with:
           name: site
           path: ./site
-
-      - name: Test the file 2nd time
-        run: ls -la docs/CNAME && md5sum docs/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
