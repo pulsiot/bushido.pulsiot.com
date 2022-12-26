@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install mkdocs and dependencies
-        run: pip install pip3 install mkdocs mkdocs-material fontawesome_markdown mdx_unimoji mkdocs-mermaid2-plugin pymdown-extensions plantuml-markdown python-markdown-math
+        run: pip install install mkdocs mkdocs-material fontawesome_markdown mdx_unimoji mkdocs-mermaid2-plugin pymdown-extensions plantuml-markdown python-markdown-math
 
       - name: Generate Documentation
         run: mkdocs build
