@@ -1,4 +1,4 @@
-# bushi.do.pulsiot.com
+# bushido.pulsiot.com
 Bushidō 武士道 : "the way of the warrior"
 
 ![Alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bushido.jpg/120px-Bushido.jpg "武士道")

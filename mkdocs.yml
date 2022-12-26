@@ -1,11 +1,38 @@
 site_name: 'Bushidō'
+site_url: 'https://bushido.pulsiot.com/'
 site_description: 'Bushidō 武士道 : "the way of the warrior"'
 site_author: 'debuggerboy'
 theme:
   name: material
-copyright: |
-  &copy; Author
-docs_dir: 'docs/'
-repo_name: 'pulsiot/bushi.do.pulsiot.com'
-repo_url: 'https://github.com/pulsiot/bushi.do.pulsiot.com'
-site_url: 'https://bushido.pulsiot.com/'
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+  palette:
+    scheme: default
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: images/favicon.png
+  icon:
+    logo: fontawesome/solid/robot
+    repo: fontawesome/brands/github
+
+copyright: 'Copyleft 🄯 debuggerboy 2020-2023 Pulsiot LLC'
+
+markdown_extensions:
+  - mdx_math:
+      enable_dollar_delimiter: true
+  - fontawesome_markdown
+  - admonition
+  - footnotes
+  - attr_list
+  - codehilite
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+repo_name: 'Pulsiot'
+repo_url: 'https://github.com/pulsiot/bushido.pulsiot.com'
