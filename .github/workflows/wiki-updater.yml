@@ -10,11 +10,28 @@ permissions:
   contents: write
 jobs:
   deploy:
+    name: Build mkdocs wiki 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+      - name: Install mkdocs and dependencies
+        run: pip install pip3 install mkdocs mkdocs-material fontawesome_markdown mdx_unimoji mkdocs-mermaid2-plugin pymdown-extensions plantuml-markdown python-markdown-math
+
+      - name: Generate Documentation
+        run: mkdocs build
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        if: ${{ github.event_name == 'push'}} 
+        with:
+          name: site
+          path: ./site
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
