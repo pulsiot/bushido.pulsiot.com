@@ -27,10 +27,10 @@ jobs:
       - name: Inject the custom domain
         env:
           WIKI_DOMAIN: ${{ secrets.CUSTOM_DOMAIN }}
-        run: echo ${WIKI_DOMAIN} > CNAME
+        run: echo ${WIKI_DOMAIN} > docs/CNAME
 
       - name: Test the file 1st time
-        run: ls -la CNAME && md5sum CNAME
+        run: ls -la docs/CNAME && md5sum docs/CNAME
 
       - name: Generate Documentation
         run: mkdocs build
@@ -43,7 +43,7 @@ jobs:
           path: ./site
 
       - name: Test the file 2nd time
-        run: ls -la CNAME && md5sum CNAME
+        run: ls -la docs/CNAME && md5sum docs/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
