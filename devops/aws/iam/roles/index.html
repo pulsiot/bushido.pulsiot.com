@@ -558,20 +558,20 @@
 <h2 id="create-iam-policy">Create IAM policy<a class="headerlink" href="#create-iam-policy" title="Permanent link">⚓︎</a></h2>
 <p>Now, lets create IAM Policy</p>
 <p>Create a file named "example-policy.json"</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;ec2:Describe*&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;iam:ListRoles&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="p">],</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;ec2:Describe*&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;iam:ListRoles&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;sts:AssumeRole&quot;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>create "user-define" policy from the above "example-policy.json" file:</p>
@@ -598,14 +598,14 @@
 <p>Now we will create a IAM role which could be assumed by the user "maurice-moss". Which have read-only access to RDS.</p>
 <p>So, lets create a trust relationship policy of the IAM role.</p>
 <p>Lets name this file : <code>example-role-trust-policy.json</code></p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;AWS&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn.aws:iam::123456789012:root&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sts:AssumeRole&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;AWS&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn.aws:iam::123456789012:root&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sts:AssumeRole&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>Lets create a IAM Role with this trust relationship policy.</p>
@@ -649,9 +649,9 @@
 </code></pre></div>
 
 <p>Now lets create three environment variables to assume the IAM role.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="n">RoleAccessKeyID</span><span class="w"></span>
-<span class="k">export</span><span class="w"> </span><span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="n">RoleSecretKey</span><span class="w"></span>
-<span class="k">export</span><span class="w"> </span><span class="n">AWS_SESSION_TOKEN</span><span class="o">=</span><span class="n">RoleSessionToken</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="n">RoleAccessKeyID</span>
+<span class="k">export</span><span class="w"> </span><span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="n">RoleSecretKey</span>
+<span class="k">export</span><span class="w"> </span><span class="n">AWS_SESSION_TOKEN</span><span class="o">=</span><span class="n">RoleSessionToken</span>
 </code></pre></div>
 
 <p>Now, lets re-try to access RDS using then IAM role:</p>
