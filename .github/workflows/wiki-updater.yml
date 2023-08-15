@@ -22,7 +22,7 @@ jobs:
           python-version: '3.10'
 
       - name: Uninstall lxml
-        rum: pip uninstall lxml
+        run: pip uninstall lxml
 
       - name: Install mkdocs and dependencies
         run: pip install mkdocs mkdocs-material fontawesome_markdown mdx_unimoji mkdocs-mermaid2-plugin pymdown-extensions plantuml-markdown python-markdown-math lxml
