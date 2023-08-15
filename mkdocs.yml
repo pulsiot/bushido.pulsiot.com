@@ -25,7 +25,6 @@ copyright: 'Copyleft 🄯 debuggerboy 2020-2023 Pulsiot LLC'
 markdown_extensions:
   - mdx_math:
       enable_dollar_delimiter: true
-  - fontawesome_markdown
   - admonition
   - footnotes
   - attr_list
