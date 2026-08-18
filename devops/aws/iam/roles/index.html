@@ -786,16 +786,16 @@
 <p>Now, lets create IAM Policy</p>
 <p>Create a file named "example-policy.json"</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;ec2:Describe*&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;iam:ListRoles&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;sts:AssumeRole&quot;</span>
+<span class="w">      </span><span class="nt">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"ec2:Describe*"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"iam:ListRoles"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"sts:AssumeRole"</span>
 <span class="w">      </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="nt">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
@@ -808,7 +808,7 @@
 <p>This should give us an output which will contain the ARN of the new policy, something like <code>arn:aws:iam::123456789012:policy/example-policy</code> (Replace 123456789012 with your own account.)</p>
 <p>Now, lets attach the "user-define" policy named "example-policy" to the user which we created earlier named "maurice moss"</p>
 <h2 id="attach-iam-policy-to-a-iam-user">Attach IAM policy to a IAM User.<a class="headerlink" href="#attach-iam-policy-to-a-iam-user" title="Permanent link">⚓︎</a></h2>
-<div class="codehilite"><pre><span></span><code>aws iam attach-user-policy --user-name maurice-moss --policy-arn &quot;arn:aws:iam::123456789012:policy/example-policy&quot;
+<div class="codehilite"><pre><span></span><code>aws iam attach-user-policy --user-name maurice-moss --policy-arn "arn:aws:iam::123456789012:policy/example-policy"
 </code></pre></div>
 
 <p>Also, check to make sure that the attachment is in place using list-attached-user-policies:</p>
@@ -826,11 +826,11 @@
 <p>So, lets create a trust relationship policy of the IAM role.</p>
 <p>Lets name this file : <code>example-role-trust-policy.json</code></p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;Principal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;AWS&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arn.aws:iam::123456789012:root&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sts:AssumeRole&quot;</span>
+<span class="w">  </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Principal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"AWS"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"arn.aws:iam::123456789012:root"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"Action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sts:AssumeRole"</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -840,7 +840,7 @@
 </code></pre></div>
 
 <p>Now lets attach an "AWS Managed" policy named "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess" to this role.</p>
-<div class="codehilite"><pre><span></span><code>aws iam attach-role-policy --role-name example-role --policy-arn &quot;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&quot;
+<div class="codehilite"><pre><span></span><code>aws iam attach-role-policy --role-name example-role --policy-arn "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess"
 </code></pre></div>
 
 <p>We can verify the managed policies attached to a role using <code>list-attached-role-policies</code> :</p>
@@ -857,22 +857,22 @@
 <p>You will see the IAM user as <code>arn:aws:iam::123456789012:user/maurice-moss</code></p>
 <p>Now try to access the EC2 and RDS instances:</p>
 <p>Lets try EC2 as 1st step:</p>
-<div class="codehilite"><pre><span></span><code>aws ec2 describe-instances --query &quot;Reservations[*].Instances[*].[VpcId, InstanceId, ImageId, InstanceType]&quot;
+<div class="codehilite"><pre><span></span><code>aws ec2 describe-instances --query "Reservations[*].Instances[*].[VpcId, InstanceId, ImageId, InstanceType]"
 </code></pre></div>
 
 <p>This should work flawlessly,</p>
 <p>Now, lets try to access RDS as 2nd step:</p>
-<div class="codehilite"><pre><span></span><code>aws rds describe-db-instances --query &quot;DBInstances[*].[DBInstanceIdentifier, DBName, DBInstanceStatus, AvailabilityZone, DBInstanceClass]&quot;
+<div class="codehilite"><pre><span></span><code>aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier, DBName, DBInstanceStatus, AvailabilityZone, DBInstanceClass]"
 </code></pre></div>
 
 <p>This command will generate an access denied error message because IAM user "maurice-moss" doesn't have access to Amazon RDS.</p>
 <p>In order for IAM user "maurice-moss" to access RDS instance, he should assume the IAM role named "example-role" as below:</p>
 <p>As a 1st step we need to identify the ARN of the IAM role named "example-role"</p>
-<div class="codehilite"><pre><span></span><code>aws iam list-roles --query &quot;Roles[?RoleName == &#39;example-role&#39;].[RoleName, Arn]&quot;
+<div class="codehilite"><pre><span></span><code>aws iam list-roles --query "Roles[?RoleName == 'example-role'].[RoleName, Arn]"
 </code></pre></div>
 
 <p>Lets keep not of the ARN from the above command, as we will have to use it with below Assume IAM role command:</p>
-<div class="codehilite"><pre><span></span><code>aws sts assume-role --role-arn &quot;arn:aws:iam::123456789012:role/example-role&quot; --role-session-name AWSCLI-Session
+<div class="codehilite"><pre><span></span><code>aws sts assume-role --role-arn "arn:aws:iam::123456789012:role/example-role" --role-session-name AWSCLI-Session
 </code></pre></div>
 
 <p>Now lets create three environment variables to assume the IAM role.</p>
@@ -882,7 +882,7 @@
 </code></pre></div>
 
 <p>Now, lets re-try to access RDS using then IAM role:</p>
-<div class="codehilite"><pre><span></span><code>aws rds describe-db-instances --query &quot;DBInstances[*].[DBInstanceIdentifier, DBName, DBInstanceStatus, AvailabilityZone, DBInstanceClass]&quot;
+<div class="codehilite"><pre><span></span><code>aws rds describe-db-instances --query "DBInstances[*].[DBInstanceIdentifier, DBName, DBInstanceStatus, AvailabilityZone, DBInstanceClass]"
 </code></pre></div>
 
 <h2 id="references">References:<a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h2>
